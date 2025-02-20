@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+    <link rel="stylesheet" href="./trabajo.css">
+</head>
+<body>
+    <h1>Ingresar Datos</h1>
+    
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Registros</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-usuarios">
+            <!-- Aquí se cargarán los registros -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita recargar la página
+
+            // Obtener los datos del formulario
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+
+            // Enviar datos con fetch()
+            fetch("./conexion.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nombre, email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Datos guardados correctamente");
+                    document.getElementById("formulario").reset();
+                    cargarUsuarios(); // Actualizar tabla
+                } else {
+                    alert("Error: " + data.error);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+
+        // Función para cargar los usuarios en la tabla
+        function cargarUsuarios() {
+            fetch("./conexion.php") // Llama a la API en modo GET
+                .then(response => response.json())
+                .then(data => {
+                    const tabla = document.getElementById("tabla-usuarios");
+                    tabla.innerHTML = ""; // Limpiar tabla antes de actualizar
+
+                    data.forEach(usuario => {
+                        const fila = `<tr>
+                            <td>${usuario.id}</td>
+                            <td>${usuario.nombre}</td>
+                            <td>${usuario.email}</td>
+                        </tr>`;
+                        tabla.innerHTML += fila;
+                    });
+                })
+                .catch(error => console.error("Error al cargar usuarios:", error));
+        }
+
+        // Cargar los registros al cargar la página
+        cargarUsuarios();
+    </script>
+</body>
+</html>

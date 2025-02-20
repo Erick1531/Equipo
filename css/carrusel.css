@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial,sans-serif;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+
+.carrusel-container{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.carrusel-slide{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-item{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.carrusel-slide img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide-text{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    font-family: Arial,sans-serif;
+}
+
+.dots-container{
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.dot{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(247, 247, 246);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.7s;
+}
+
+.dot.active{
+    background-color: rgb(44, 44, 255);
+}
+
+/* Contenedor de los botones */
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para los botones */
+.auth-button {
+    background-color: #ededed; /* Color de fondo */
+    color: rgb(47, 47, 47); /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+.second{
+    color: rgb(71, 178, 239);
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.auth-button:hover {
+    background-color: #abbfe9; /* Cambia el color de fondo */
+}
+
+/* Estilos específicos para el botón de Login */
+form[action="./login.html"] .auth-button {
+    background-color: #ffffff; /* Color de fondo diferente */
+}
+
+form[action="./login.html"] .auth-button:hover {
+    background-color: #007B9E; /* Cambia el color de fondo al pasar el mouse */
+}
+
+@media (min-with: 768px){
+    .carrusel-container,
+    .dots-container,
+    .dot{
+        display: none;
+
+    }
+    body::before{
+        content: "Esta pagina esta diseñada solo para moviles. porfavor, accede desde un dispositivo movil.";
+        display: block;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        color: red;
+        background-color: #fff;
+    }
+
+  
+
+}

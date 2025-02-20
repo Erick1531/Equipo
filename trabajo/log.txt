@@ -1,0 +1,2 @@
+JSON Recibido: nombre=erick&email=erick%40gmail.com
+Error al decodificar JSON
