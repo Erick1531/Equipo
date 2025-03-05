@@ -1,97 +1,112 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Estilos globales para resetear márgenes y padding */
+* {
+    box-sizing: border-box; /* Mantiene el tamaño de los elementos considerando el padding y borde */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
 }
 
-body{
-    font-family: Arial,sans-serif;
-    background-color: #ffffff;
-    padding: 10px;
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto */
+    background-color: #ffffff; /* Color de fondo de la página */
+    padding: 10px; /* Espaciado interior del cuerpo */
 }
 
-
-.carrusel-container{
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.carrusel-slide{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* Contenedor del carrusel con diseño responsivo */
+.carrusel-container {
+    position: relative; /* Permite posicionar elementos dentro de él */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%; /* Asegura que no se desborde */
+    margin: auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta las imágenes que se desbordan */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto visual */
 }
 
-.slide-item{
-    display: flex;
-    width: 100%;
-    text-align: center;
+/* Contenedor de las diapositivas del carrusel */
+.carrusel-slide {
+    display: flex; /* Organiza las imágenes en fila */
+    transition: transform 0.5s ease-in-out; /* Efecto de transición al cambiar de imagen */
+    height: 100%;
 }
 
-.carrusel-slide img{
-    width: 100%;
-    border-radius: 10px;
+/* Elementos de cada diapositiva */
+.slide-item {
+    display: flex; /* Mantiene el contenido alineado */
+    width: 100%; /* Cada diapositiva ocupa todo el ancho */
+    text-align: center; /* Alinea el texto en el centro */
 }
 
-.slide-text{
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-    font-family: Arial,sans-serif;
+/* Estilos para las imágenes dentro del carrusel */
+.carrusel-slide img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el espacio disponible */
+    border-radius: 10px; /* Redondea los bordes */
 }
 
-.dots-container{
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-}
-.dot{
-    width: 12px;
-    height: 12px;
-    background-color: rgb(247, 247, 246);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.7s;
+/* Texto descriptivo de cada diapositiva */
+.slide-text {
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 16px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    font-family: Arial, sans-serif; /* Fuente del texto */
 }
 
-.dot.active{
-    background-color: rgb(44, 44, 255);
+/* Contenedor de los indicadores del carrusel */
+.dots-container {
+    text-align: center; /* Centra los puntos */
+    padding: 10px; /* Espaciado interno */
+    position: absolute; /* Posiciona de forma absoluta dentro del carrusel */
+    bottom: 10px; /* Lo coloca en la parte inferior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta su posición exacta */
+    display: flex; /* Organiza los puntos en línea */
+    gap: 8px; /* Espaciado entre los puntos */
 }
 
-/* Contenedor de los botones */
+/* Estilos de los puntos indicadores */
+.dot {
+    width: 12px; /* Tamaño del punto */
+    height: 12px; /* Altura del punto */
+    background-color: rgb(247, 247, 246); /* Color base */
+    border-radius: 50%; /* Forma redonda */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre él */
+    transition: background 0.7s; /* Transición suave al cambiar de color */
+}
+
+/* Puntos activos en el carrusel */
+.dot.active {
+    background-color: rgb(44, 44, 255); /* Color cuando está seleccionado */
+}
+
+/* Contenedor de los botones de autenticación */
 .auth-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre los botones */
-    margin-top: 20px; /* Margen superior */
+    display: flex; /* Coloca los botones en línea */
+    justify-content: center; /* Los centra horizontalmente */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 20px; /* Margen superior para separación */
 }
 
-/* Estilos para los botones */
+/* Estilos generales de los botones */
 .auth-button {
     background-color: #ededed; /* Color de fondo */
     color: rgb(47, 47, 47); /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de la fuente */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-.second{
-    color: rgb(71, 178, 239);
+    border: none; /* Elimina los bordes */
+    padding: 25px 50px; /* Aumenta el tamaño del botón */
+    font-size: 18px; /* Tamaño del texto más grande */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease; /* Efecto suave en hover */
+    width: 250px; /* Ancho fijo para hacerlos más alargados */
 }
 
-/* Efecto al pasar el mouse sobre el botón */
+/* Estilo para el segundo botón con color específico */
+.second {
+    color: rgb(71, 178, 239); /* Color de texto diferente */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
 .auth-button:hover {
-    background-color: #abbfe9; /* Cambia el color de fondo */
+    background-color: #abbfe9; /* Color de fondo al hacer hover */
 }
 
 /* Estilos específicos para el botón de Login */
@@ -100,26 +115,6 @@ form[action="./login.html"] .auth-button {
 }
 
 form[action="./login.html"] .auth-button:hover {
-    background-color: #007B9E; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #007B9E; /* Cambio de color al pasar el mouse */
 }
 
-@media (min-with: 768px){
-    .carrusel-container,
-    .dots-container,
-    .dot{
-        display: none;
-
-    }
-    body::before{
-        content: "Esta pagina esta diseñada solo para moviles. porfavor, accede desde un dispositivo movil.";
-        display: block;
-        text-align: center;
-        padding: 20px;
-        font-size: 18px;
-        color: red;
-        background-color: #fff;
-    }
-
-  
-
-}

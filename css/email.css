@@ -1,0 +1,55 @@
+/* Estilos que solo se aplican en pantallas menores a 768px (dispositivos móviles) */
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-direction: column; /* Alinea los elementos en columna */
+        height: 100%; /* Ocupa toda la altura de la pantalla */
+        overflow: hidden;
+    }
+
+    .titulo {
+        text-align: center; /* Centra el texto */
+    }
+
+    .boton {
+        text-align: center; /* Centra el botón */
+    }
+
+    .boton1{
+        border-radius: 10px;
+        width: 83%;
+        height: 35px;
+        margin: 10px;
+    }
+
+    .entrada {
+        display: flex;
+        justify-content: center; /* Centra el input horizontalmente */
+        margin: 10px 0; /* Espaciado opcional */
+    }
+
+    .entradaPosicion{
+        width: 80%; /* Ocupa el ancho disponible */
+        border-radius: 20px;
+        height: 25px;
+        margin: 10px;
+    }
+
+    .imagen {
+        text-align: center;
+        margin: 90px;
+    }
+
+    
+
+    .Titulo {
+        position: absolute;
+        top: -1px; /* Ajusta la posición verticalmente */
+        left: 50%;
+        transform: translateX(-50%); /* Centra horizontalmente */
+        display: flex;
+        justify-content: center;
+    }
+}

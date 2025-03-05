@@ -1,0 +1,50 @@
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-direction: column; /* Alinea los elementos en columna */
+        height: 100%; /* Ocupa toda la altura de la pantalla */
+        overflow: hidden;
+    }
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+
+.inputCentrar{
+    display: block; /* Hace que el input sea un bloque */
+    margin: 0 auto; /* Centra el input horizontalmente */
+    width: 80%; /* Ocupa el ancho disponible */
+    height: 35px;
+    border-radius: 10px;
+}
+
+.boton{
+    height: 30px;        /* Ajusta el tamaño del botón */
+    width: 82%;         /* Ajusta el tamaño del botón */
+    margin-top: 20px;   /* Espaciado opcional */
+    border-radius: 10px;
+}
+
+.centrarBoton{
+    text-align: center; /* Centra el botón */
+}
+
+.Botonlejos{
+    height: 30px;        /* Ajusta el tamaño del botón */
+    width: 82%;         /* Ajusta el tamaño del botón */
+    margin-top: 60px;   /* Espaciado opcional */
+    border-radius: 10px;
+}
+
+}
