@@ -7,6 +7,7 @@
         flex-direction: column; /* Alinea los elementos en columna */
         height: 100%; /* Ocupa toda la altura de la pantalla */
         overflow: hidden;
+        background-color: rgb(255, 255, 255);
     }
 
     .titulo {
