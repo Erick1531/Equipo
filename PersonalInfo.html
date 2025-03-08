@@ -12,20 +12,20 @@
     </div>
 <div>
     <h1 class="title">Personal Info</h1>
-    <form method="post" action="login.html">
+    <form method="post" action="./php/personalinfo.php">
     <div class="input-container">
         <div>
             <p>Name</p>
-            <input class="Centrarinput" type="text">
+            <input class="Centrarinput" type="text" name="name">
             
         </div>
         <div>
             <p>Last Name</p>
-            <input class="Centrarinput" type="text">
+            <input class="Centrarinput" type="text" name="lastname">
         </div>
         <div>
             <p>Password</p>
-            <input class="Centrarinput" type="password">
+            <input class="Centrarinput" type="password" name="password">
             
         </div>
         <div>
@@ -34,7 +34,7 @@
             
         </div>
         <div>
-            <button class="boton">continue</button>
+            <button class="boton" type="submit">Submit</button>
         </div>
     </div>
     </form>
