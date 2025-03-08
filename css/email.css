@@ -21,7 +21,7 @@
     .boton1{
         border-radius: 10px;
         width: 83%;
-        height: 35px;
+        height: 45px;
         margin: 10px;
     }
 
@@ -32,15 +32,16 @@
     }
 
     .entradaPosicion{
-        width: 80%; /* Ocupa el ancho disponible */
+        width: 82%; /* Ocupa el ancho disponible */
         border-radius: 20px;
-        height: 25px;
+        height: 50px;
         margin: 10px;
     }
 
     .imagen {
         text-align: center;
-        margin: 90px;
+        margin-top: 150px;
+        margin-bottom: 70px;
     }
 
     
