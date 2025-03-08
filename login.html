@@ -14,17 +14,20 @@
   <p>Enter you data correctly</p>
     </div>
     <form method="post" action="./php/login.php">
-        <div>
-            <h4>Enter your email or phone number</h4>
-            <input  class="inputCentrar" type="text">
-        </div>
-        <div>
-            <h4>Enter your password</h4>
-            <input class="inputCentrar" type="password">
-        </div>
-        <div class="centrarBoton">
-            <button class="boton">Login</button>
-        </div>
+        <form method="post" action="./php/login.php">
+            <div>
+                <h4>Enter your email</h4>
+                <input class="inputCentrar" type="email" name="email" required>
+            </div>
+            <div>
+                <h4>Enter your password</h4>
+                <input class="inputCentrar" type="password" name="password" required>
+            </div>
+            <div class="centrarBoton">
+                <button class="boton" type="submit">Login</button>
+            </div>
+        </form>
+        
 </div>
     </form>
     <form action="forgotPassword.html">
