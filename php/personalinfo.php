@@ -23,7 +23,7 @@ $stmt->bind_param("sssi", $name, $lastname, $password, $_SESSION['user_id']);
 if ($stmt->execute()) {
     echo "<script>
     alert('Registro exitoso 🎉');
-    window.location.href='http://localhost/ProyectoUtt/Equipo/login.html';
+    window.location.href='http://192.168.100.7/ProyectoUtt/Equipo/login.html';
     </script>";
 } else {
     echo "Error al registrar: " . $conn->error;

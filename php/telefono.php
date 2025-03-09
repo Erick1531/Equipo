@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         $_SESSION['user_id'] = $conn->insert_id; // Guardar el ID del usuario en la sesión
-        header("Location: http://localhost/Proyectoutt/equipo/Email.html"); // Redirigir a la siguiente página
+        header("Location: http://192.168.100.7/ProyectoUtt/Equipo/email.html"); // Redirigir a la siguiente página
         exit();
     } else {
         echo "Error: " . $conn->error;

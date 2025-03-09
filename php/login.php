@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $usuario['password'])) {
             echo "<script>
                 alert('Bienvenido, $email');
-                window.location.href='http://localhost/ProyectoUtt/Equipo/Homepage.html';
+                window.location.href='http://192.168.100.7/ProyectoUtt/Equipo/Homepage.php';
             </script>";
         } else {
             echo "<script>alert('Correo o contraseña incorrecta'); window.location.href='../login.html';</script>";

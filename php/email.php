@@ -11,7 +11,7 @@ $stmt->bind_param("si", $email, $_SESSION['user_id']); // "si" -> string (correo
 if ($stmt->execute()) {
     echo "<script>
             alert('Registro exitoso 🎉');
-            window.location.href = 'http://localhost/Proyectoutt/equipo/PersonalInfo.html';
+            window.location.href = 'http://192.168.100.7/ProyectoUtt/Equipo/PersonalInfo.html';
           </script>";
     exit();
 } else {
